@@ -55,10 +55,4 @@ def genesis_block():
     block = Block(block_data)
     return block
 
-if __name__ == '__main__':
-    chaindata_dir = 'chaindata/'
-    if not os.path.exists(chaindata_dir):
-        os.mkdir(chaindata_dir)
-    if os.listdir(chaindata_dir) == []:
-        genesis = genesis_block()
-        genesis.self_save()
+
